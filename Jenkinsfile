@@ -10,7 +10,7 @@ pipeline {
         stage('Test'){
             steps {
                 sh 'echo "Unit testing compiled libraries..."'
-                awsCodeBuild projectName: 'jenkins_generic', credentialsType: 'keys', region: 'us-east-2', sourceControlType: 'jenkins' envVariable: '[{TEST,veldboom}]'
+                awsCodeBuild projectName: 'jenkins_generic', credentialsType: 'keys', region: 'us-east-2', sourceControlType: 'jenkins', envVariable: '[{TEST,veldboom}]'
             }
         }
         stage('Preflight'){
