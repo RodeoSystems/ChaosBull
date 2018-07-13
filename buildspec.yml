@@ -5,3 +5,4 @@ phases:
     commands:
     - pwd
     - ls -la
+    - echo $TEST
